@@ -23,7 +23,7 @@ def delete_file_after_delay(file_path, delay):
 def speak():
     text = request.form['text']
     tts = pyttsx3.init()
-    unique_filename = f'static/output_{uuid.uuid4().hex}.mp3'
+    unique_filename = f'static/audio/output_{uuid.uuid4().hex}.mp3'
     tts.save_to_file(text, unique_filename)
     tts.runAndWait()
 
